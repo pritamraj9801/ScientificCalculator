@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+     <div id="calculator">
+        <div id="calculatorSection">
+            <div id="previousInput">
+            </div>
+            <div id="currentInput">
+                <input type="text" placeholder="0"/>
+            </div>
+            <div id="toggleButtons">
+                <button id="degreeUnit">DEG</button>
+                <button id="exponentialNotation">F-E</button>
+            </div>
+            <div id="memoryFunctions">
+                <button onclick="Handle_memoryClear()" class="light-text">MC</button>
+                <button onclick="Handle_memoryRead()" class="light-text">MR</button>
+                <button onclick="Handle_memoryPlus()">M+</button>
+                <button onclick="Handle_memoryMinus()">M-</button>
+                <button onclick="Handle_store()">MS</button>
+            </div>
+            <hr id="line"/>
+            <div id="dropDownFunctions">
+                <button id="trigoFunctions">
+                    Trigonometry
+                    <span>
+                        &#8964;
+                    </span>
+                </button>
+                <div id="trigoCollapseFunctions">
+                    <div>
+                        <button id="secondTrigoMethods">2nd</button>
+
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('sin')">sin</button>
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('cos')">cos</button>
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('tan')">tan</button>
+                        <!-- to show after 2nd click -->
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('sin-1')">sin<sup>-1</sup></button>
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('cos-1')">cos<sup>-1</sup></button>
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('tan-1')">tan<sup>-1</sup></button>
+                        <!-- to show after hyp click -->
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('sinh')">sinh</button>
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('cosh')">cosh</button>
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('tanh')">tanh</button>
+                        <!-- to show after 2nd and hyp click -->
+                        <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('sinh-1')">sinh<sup>-1</sup></button>
+                        <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('cosh-1')">cosh<sup>-1</sup></button>
+                        <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('tanh-1')">tanh<sup>-1</sup></button>
+                    </div>
+                    <div>
+                        <button id="hypTrigoMethods">hyp</button>
+
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('sec')">sec</button>
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('csc')">csc</button>
+                        <button class="displayInitial trigo00 function" onclick="TrigonometricFunctions('cot')">cot</button>
+                        <!-- to show after 2nd click -->
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('sec-1')">sec<sup>-1</sup></button>
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('csc-1')">csc<sup>-1</sup></button>
+                        <button class="displayNone trigo10 function" onclick="TrigonometricFunctions('cot-1')">cot<sup>-1</sup></button>
+                         <!-- to show after hyp click -->
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('sech')">sech</button>
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('csch')">csch</button>
+                        <button class="displayNone trigo01 function" onclick="TrigonometricFunctions('coth')">coth</button>
+                         <!-- to show after 2nd and hyp click -->
+                         <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('sech-1')">sech<sup>-1</sup></button>
+                         <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('csch-1')">csch<sup>-1</sup></button>
+                         <button class="displayNone trigo11 function" onclick="TrigonometricFunctions('coth-1')">coth<sup>-1</sup></button>
+                    </div>
+                </div>
+                <button id="functions">
+                    Functions
+                    <span>
+                        &#8964;
+                    </span>
+                </button>
+                <div id="functionCollapse">
+                    <div>
+                        <button onclick="Handle_abs()">|x|</button>
+                        <button onclick="Handle_ceil()">&lceil;x&rceil;</button>
+                        <button onclick="Handle_floor()">&lfloor;x&rfloor;</button>
+                    </div>
+                    <div>
+                        <button onclick="Handle_random()">rand</button>
+                        <button onclick="Handle_dms()">&rarr;dms</button>
+                        <button onclick="Handle_deg()">&rarr;deg</button>
+                    </div>
+                </div>
+            </div>
+            <div id="operations">
+                <div>
+                    <button id="secondMethods">2nd</button>
+                    <button onclick="Handle_Pi()">&pi;</button>
+                    <button onclick="Handle_e()">e</button>
+                    <button onclick="Handle_ce()">c</button>
+                    <button onclick="Handle_back()">&#9003;</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_square()">x<sup>2</sup></button>
+                    <button class="displayNone" onclick="Handle_cube()">x<sup>3</sup></button>
+                    <button onclick="Handle_1byx()">1/x</button>
+                    <button onclick="Handle_abs()">|x|</button>
+                    <button onclick="Handle_exp()">exp</button>
+                    <button onclick="Handle_mod()">mod</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_sqrt()">2&#8730;x</button>
+                    <button class="displayNone" onclick="Handle_cubicRoot()">3&#8730;x</button>
+                    <button onclick="Handle_startingRoundBraces()">(</button>
+                    <button onclick="Handle_endingRoundBraces()">)</button>
+                    <button onclick="Handle_fact()">n!</button>
+                    <button onclick="ArithmeticOperation('divide')">&#247;</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_XPowerY()">x<sup>y</sup></button>
+                    <button class="displayNone" onclick="Handle_YRootX()">y&#8730;x</button>
+                    <button onclick="HandleDigit(7)" class="light">7</button>
+                    <button onclick="HandleDigit(8)" class="light">8</button>
+                    <button onclick="HandleDigit(9)" class="light">9</button>
+                    <button onclick="ArithmeticOperation('multiply')">&times;</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_10PowerX()">10<sup>x</sup></button>
+                    <button class="displayNone" onclick="Handle_2PowerX()">2<sup>x</sup></button>
+                    <button onclick="HandleDigit(4)" class="light">4</button>
+                    <button onclick="HandleDigit(5)" class="light">5</button>
+                    <button onclick="HandleDigit(6)" class="light">6</button>
+                    <button onclick="ArithmeticOperation('substract')">-</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_log()">log</button>
+                    <button class="displayNone" onclick="Handle_logYPowerX()">log<sub>y</sub>x</button>
+                    <button onclick="HandleDigit(1)" class="light">1</button>
+                    <button onclick="HandleDigit(2)" class="light">2</button>
+                    <button onclick="HandleDigit(3)" class="light">3</button>
+                    <button onclick="ArithmeticOperation('add')">+</button>
+                </div>
+                <div>
+                    <button class="displayInitial" onclick="Handle_ln()">ln</button>
+                    <button  class="displayNone" onclick="Handle_ePowerX()">e<sup>x</sup> </button>
+                    <button onclick="Handle_togglePlusMinus()" class="light">+/-</button>
+                    <button onclick="HandleDigit_0()" class="light">0</button>
+                    <button onclick="Handle_decimal()" class="light">.</button>
+                    <button id="eql_btn" onclick="Handle_Equal()">=</button>
+                </div>
+            </div>
+        </div>
+        <div id="historySection">
+            <div id="buttons"> 
+                <span id="historyBtn">History</span>
+                <span id="memoryBtn">Memory</span>
+            </div>
+            <div id="memoryAndHistorySection">
+
+            </div>
+            <div id="trashBtn">
+            
+            </div>
+        </div>
+     </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
