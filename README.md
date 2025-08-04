@@ -1,4 +1,3 @@
-![Screenshot 2025-06-18 122137](https://github.com/user-attachments/assets/7e63c0d9-a021-4e20-b145-5a4f3d9d468c)
 
 # Scientific Calculator (Windows Style)
 
@@ -22,7 +21,7 @@ This is a **Scientific Calculator** built using **HTML, CSS, and JavaScript**. I
 
 ## 📸 Screenshot
 
-*(See image above)*
+![Screenshot 2025-06-18 122137](https://github.com/user-attachments/assets/7e63c0d9-a021-4e20-b145-5a4f3d9d468c)
 
 ## 🚀 How to Use
 
@@ -30,8 +29,6 @@ This is a **Scientific Calculator** built using **HTML, CSS, and JavaScript**. I
 2. Open `index.html` in any modern web browser.
 3. Start calculating!
 
-## ✅ Live Demo
-NO
 
 ## 📌 Notes
 
