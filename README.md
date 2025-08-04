@@ -31,8 +31,7 @@ This is a **Scientific Calculator** built using **HTML, CSS, and JavaScript**. I
 3. Start calculating!
 
 ## ✅ Live Demo
-
-> _[Optional: Add your live demo link here if hosted on GitHub Pages, Netlify, etc.]_
+NO
 
 ## 📌 Notes
 
